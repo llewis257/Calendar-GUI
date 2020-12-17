@@ -1,7 +1,7 @@
 from datetime import date
 from tkinter import *
 from dateutil import parser
-###import re
+import os
 
 
 from tkcalendar import *
@@ -12,7 +12,7 @@ import tkinter.messagebox as tm
 from pathlib import Path
 
 root = Tk() ###initializing tkinter
-root.title("My_Thoughts_Hub")
+root.title("My_cal_of_thoughts")
 root.geometry("600x600")
 #######getting today's date
 today = date.today()
@@ -39,8 +39,11 @@ def get_date2workon():
     return (y2,m2,d2)
 
 ####Path to the text file
-
-vers = Path(r'D:\Free_time_learning\DesktopApp\CalendarGUI\dossier')
+try:
+    os.mkdir("dossier")
+except FileExistsError:
+    pass
+vers = Path('.\dossier')
     
 def showcase():
     clicked_date = get_date2workon()
