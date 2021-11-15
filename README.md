@@ -2,6 +2,8 @@
 
 A calendar desktop-app-like GUI using Python Python-Tkinter\.
 
+
+The saved text is used as training data on an NLG Recurrent Neural Network
 # Creating an executable file
 We run:\
 
